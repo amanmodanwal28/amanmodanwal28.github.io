@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/amanmodanwal28.github.io/static/css/main.7474fbef.css",
-    "main.js": "/amanmodanwal28.github.io/static/js/main.ae42ca90.js",
-    "static/js/453.1407b060.chunk.js": "/amanmodanwal28.github.io/static/js/453.1407b060.chunk.js",
-    "static/media/img.png": "/amanmodanwal28.github.io/static/media/img.a36a051b25024538aff0.png",
-    "static/media/amanResume.pdf": "/amanmodanwal28.github.io/static/media/amanResume.badf293ec616d6b2a300.pdf",
-    "index.html": "/amanmodanwal28.github.io/index.html",
-    "main.7474fbef.css.map": "/amanmodanwal28.github.io/static/css/main.7474fbef.css.map",
-    "main.ae42ca90.js.map": "/amanmodanwal28.github.io/static/js/main.ae42ca90.js.map",
-    "453.1407b060.chunk.js.map": "/amanmodanwal28.github.io/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/static/css/main.7474fbef.css",
+    "main.js": "/static/js/main.fc897595.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/img.png": "/static/media/img.a36a051b25024538aff0.png",
+    "static/media/amanResume.pdf": "/static/media/amanResume.badf293ec616d6b2a300.pdf",
+    "index.html": "/index.html",
+    "main.7474fbef.css.map": "/static/css/main.7474fbef.css.map",
+    "main.fc897595.js.map": "/static/js/main.fc897595.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7474fbef.css",
-    "static/js/main.ae42ca90.js"
+    "static/js/main.fc897595.js"
   ]
 }
