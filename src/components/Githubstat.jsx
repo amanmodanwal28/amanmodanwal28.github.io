@@ -2,8 +2,7 @@ import { Box, Center, Heading, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { SiGithub } from "react-icons/si";
 import Styles from "../styles/stats.module.css";
-import GitHubCalendar from "github-calendar"
-import { bs } from "./Projects";
+
 
 // https://github-readme-streak-stats.herokuapp.com?user=
 // https://streak-stats.demolab.com?user=faisalinfinity&_border=true&theme=dark&hide_border=true&theme=react

@@ -3,7 +3,6 @@ import {
   Flex,
   Heading,
   HStack,
-  IconButton,
   Spacer,
   VStack,
   Icon,
@@ -12,10 +11,8 @@ import {
 } from "@chakra-ui/react";
 import "./App.css";
 import Header from "./components/Header";
-import axios from "axios";
 
 import Profile from "./components/Profile";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -33,13 +30,13 @@ import Toolset from "./components/Toolset";
 import Experience from "./components/Experience";
 function App() {
   const { scrollref } = useContext(ScrollContext);
-  const [data, setData] = useState({});
+  const [data] = useState({});
 
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
   const skillsRef = useRef(null);
-  const expRef=useRef(null)
+  const expRef = useRef(null)
 
   useEffect(() => {
     scrollref?.current.scrollIntoView({ behavior: "smooth" });
@@ -125,33 +122,7 @@ function App() {
           >
             <Icon as={MdPeople}></Icon>Unique Visitors {data.length}
           </Box>
-          {/* <IconButton
-          position={"relative"}
-            zIndex={"22"}
-            icon={<FaLinkedin />}
-            isRound="true"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/faisal-mujtaba-480601244"
-              )
-            }
-          ></IconButton>
-          <IconButton
-        position={"relative"}
-            zIndex={"22"}
-            ml={2}
-            icon={<FaInstagram />}
-            isRound="true"
-            onClick={() => window.open("https://www.instagram.com/mj_faisal_/")}
-          ></IconButton>
-          <IconButton
-               position={"relative"}
-            zIndex={22}
-            ml={2}
-            icon={<FaGithub />}
-            isRound="true"
-            onClick={() => window.open("https://github.com/faisalinfinity")}
-          ></IconButton> */}
+
         </Flex>
 
         <Header></Header>

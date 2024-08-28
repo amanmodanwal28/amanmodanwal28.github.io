@@ -20,7 +20,7 @@ import {
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsPerson } from "react-icons/bs";
 import img from "../images/img.png";
-import { SiLinkedin, SiTwitter } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
 export default function Contact({ contactRef }) {
   return (
     <Container
@@ -119,17 +119,6 @@ export default function Contact({ contactRef }) {
                       _hover={{ bg: '#0D74FF' }}
                       icon={<BsGithub size="28px" />}
                     />
-                    {/* <IconButton
-                      onClick={() =>
-                        window.open('https://twitter.com/faisal_mujtaba_')
-                      }
-                      aria-label="discord"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: '#0D74FF' }}
-                      icon={<SiTwitter size="28px" />}
-                    /> */}
                   </HStack>
                 </Box>
               </WrapItem>

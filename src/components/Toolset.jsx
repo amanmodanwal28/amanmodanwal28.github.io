@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, {  } from "react";
 import {
   Box,
   Flex,
@@ -9,30 +9,17 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 
-import { FaReact, FaTools } from "react-icons/fa";
+import {  FaTools } from "react-icons/fa";
 import {
-  SiChakraui,
-  SiCodesandbox,
-  SiCoronarenderer,
-  SiDjango,
-  SiExpress,
-  SiFirebase,
   SiGit,
   SiGithub,
-  SiHtml5,
-  SiJavascript,
-  SiMaterialui,
-  SiMongodb,
   SiNetlify,
-  SiNodedotjs,
-  SiRedux,
   SiReplit,
-  SiTypescript,
   SiVisualstudiocode,
 } from "react-icons/si";
-import { IoLogoCss3, IoLogoNpm } from "react-icons/io";
-import { TbBrandNextjs, TbBrandVercel } from "react-icons/tb";
-import { MdMilitaryTech } from "react-icons/md";
+import {  IoLogoNpm } from "react-icons/io";
+import {  TbBrandVercel } from "react-icons/tb";
+
 const Toolset = ({ skillsRef }) => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 

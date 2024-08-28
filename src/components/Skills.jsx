@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, {  } from "react";
 import {
   Box,
   Flex,
@@ -11,19 +11,14 @@ import {
 
 import { FaReact } from "react-icons/fa";
 import {
-  SiChakraui,
   SiExpress,
   SiHtml5,
   SiJavascript,
-  SiMaterialui,
   SiMongodb,
   SiNodedotjs,
-  SiRedux,
   SiTailwindcss,
-  SiTypescript,
 } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io";
-import { TbBrandNextjs } from "react-icons/tb";
 import { MdMilitaryTech } from "react-icons/md";
 const Skills = ({ skillsRef }) => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");

@@ -5,7 +5,7 @@ import { Stack, Flex, Box, Text } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
 import aman from "./amanResume.pdf";
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+
 
 function Header() {
   const { colorMode } = useColorMode();
@@ -16,10 +16,7 @@ function Header() {
 
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   function downloadFile() {
-    const driveUrl =
-      "https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link";
-    const fileId = driveUrl.match(/\/d\/(.+?)\/view/)[1];
-    const pdfUrl = `https://drive.google.com/uc?id=1w6skRez72kCV9W7hv4TTjIqgrYb9NASF&export=download`;
+
   }
 
   // const resumedown2 = () => {
@@ -44,22 +41,9 @@ function Header() {
     );
   };
 
-  const [flipped, setFlipped] = useState(false);
+  const [flipped] = useState(false);
 
-  const flip = () => {
-    setFlipped(!flipped);
-    if (flipped) {
-      if (Ref1.current) {
-        Ref1.current.style.display = "none";
-        Ref2.current.style.display = "block";
-      }
-    } else {
-      if (Ref1.current) {
-        Ref1.current.style.display = "block";
-        Ref2.current.style.display = "none";
-      }
-    }
-  };
+
 
   return (
     <Stack>
@@ -104,23 +88,19 @@ function Header() {
           <Button
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             onClick={() => {
-              window.open(
-                'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link'
-              )
-              downloadFile()
+              // Create a temporary <a> element to trigger the download
+              const link = document.createElement('a')
+              link.href = aman // Imported PDF file URL
+              link.download = 'Aman-Modanwal-Resume.pdf' // Filename for download
+              document.body.appendChild(link)
+              link.click()
+              document.body.removeChild(link)
             }}
             mt="5px"
             rounded={'md'}
             id="resume-button-2"
           >
-            <a
-              id="resume-link-2"
-              href={aman}
-              download={'Aman-Modanwal-Resume'}
-            >
-              {' '}
-              Resume{' '}
-            </a>
+            Resume
           </Button>
         </Box>
         <div className="page-container">

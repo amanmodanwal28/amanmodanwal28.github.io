@@ -42,128 +42,128 @@ export default function Navbar({ sections }) {
     <>
       <Box
         id="nav-menu"
-        w={"100%"}
+        w={'100%'}
         position="fixed"
-        zIndex={"4"}
+        zIndex={'4'}
         bgGradient={useColorModeValue(
-          "linear(to-r, cyan.400, teal.100, purple.600)",
-          "linear(to-r, cyan.400, blue.500, purple.600)"
+          'linear(to-r, cyan.400, teal.100, purple.600)',
+          'linear(to-r, cyan.400, blue.500, purple.600)'
         )}
-         px={2}
+        px={2}
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
-            bg={"none"}
-            size={"md"}
+            bg={'none'}
+            size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack id="navbtn" spacing={8} alignItems={"center"}>
+          <HStack id="navbtn" spacing={8} alignItems={'center'}>
             <Button
               onClick={() => handleClick(sections.aboutRef)}
               bg="none"
               leftIcon={<ImEarth />}
-              fontWeight={"bold"}
-             fontFamily={"san-serif"}
+              fontWeight={'bold'}
+              fontFamily={'san-serif'}
               className="nav-link home"
             >
-              {" "}
+              {' '}
               Home
             </Button>
             <HStack
-              as={"nav"}
+              as={'nav'}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: 'none', md: 'flex' }}
             >
               <Button
                 leftIcon={<FcAbout />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.aboutRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "white",
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
                 }}
                 className="nav-link about"
-                fontWeight={"bold"}
-                fontFamily={"san-serif"}
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
                 About Me
               </Button>
               <Button
                 leftIcon={<MdMilitaryTech />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.expRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "white",
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
                 }}
                 className="nav-link skills"
-                fontWeight={"bold"}
-                fontFamily={"san-serif"}
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
-               Experience
+                Experience
               </Button>
               <Button
                 leftIcon={<MdMilitaryTech />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.skillsRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "white",
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
                 }}
                 className="nav-link skills"
-                fontWeight={"bold"}
-                fontFamily={"san-serif"}
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
                 Skills
               </Button>
               <Button
                 leftIcon={<AiOutlineFundProjectionScreen />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.projectRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "white",
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
                 }}
                 className="nav-link projects"
-                fontWeight={"bold"}
-                fontFamily={"san-serif"}
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
                 Projects
               </Button>
               <Button
                 leftIcon={<MdContacts />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.contactRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "white",
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
                 }}
                 className="nav-link contact"
-                fontWeight={"bold"}
-                fontFamily={"san-serif"}
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
                 Contact
               </Button>
@@ -171,32 +171,38 @@ export default function Navbar({ sections }) {
                 leftIcon={<GrDocumentPdf />}
                 onClick={() => {
                   window.open(
-                    "https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link"
-                  );
+                    'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link'
+                  )
                   // downloadFile();
                 }}
                 bg="none"
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "white",
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
                 }}
                 className="nav-link resume"
                 id="resume-button-1"
-                fontWeight={"bold"}
-                fontFamily={"san-serif"}
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
-                <a id="resume-link-1" href={aman} download={"Aman-Modanwal-Resume"}>   Resume </a>
-
+                <a
+                  id="resume-link-1"
+                  href={aman}
+                  download={'Aman-Modanwal-Resume'}
+                >
+                  {' '}
+                  Resume{' '}
+                </a>
               </Button>
             </HStack>
           </HStack>
-          <Flex alignItems={"center"}>
+          <Flex alignItems={'center'}>
             <IconButton
-              bg={"none"}
+              bg={'none'}
               ml={8}
               icon={isDark ? <FaSun /> : <FaMoon />}
               isRound="true"
@@ -206,85 +212,85 @@ export default function Navbar({ sections }) {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
               <Button
                 leftIcon={<FcAbout />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.aboutRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "black",
+                  textDecoration: 'none',
+                  bg: 'gray.200',
+                  color: 'black',
                 }}
-                href={"#"}
+                href={'#'}
               >
                 About Me
               </Button>
               <Button
                 leftIcon={<MdMilitaryTech />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.expRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "black",
+                  textDecoration: 'none',
+                  bg: 'gray.200',
+                  color: 'black',
                 }}
-                href={"#"}
+                href={'#'}
               >
-              Experience
+                Experience
               </Button>
               <Button
                 leftIcon={<MdMilitaryTech />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.skillsRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "black",
+                  textDecoration: 'none',
+                  bg: 'gray.200',
+                  color: 'black',
                 }}
-                href={"#"}
+                href={'#'}
               >
                 Skills
               </Button>
               <Button
                 leftIcon={<AiOutlineFundProjectionScreen />}
-                bg={"none"}
+                bg={'none'}
                 onClick={() => handleClick(sections.projectRef)}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "black",
+                  textDecoration: 'none',
+                  bg: 'gray.200',
+                  color: 'black',
                 }}
-                href={"#"}
+                href={'#'}
               >
                 Projects
               </Button>
               <Button
                 leftIcon={<MdContacts />}
                 onClick={() => handleClick(sections.contactRef)}
-                bg={"none"}
+                bg={'none'}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "black",
+                  textDecoration: 'none',
+                  bg: 'gray.200',
+                  color: 'black',
                 }}
-                href={"#"}
+                href={'#'}
               >
                 Contact
               </Button>
@@ -292,17 +298,43 @@ export default function Navbar({ sections }) {
                 leftIcon={<GrDocumentPdf />}
                 onClick={() =>
                   (window.location.href =
-                    "https://drive.google.com/uc?id=1w6skRez72kCV9W7hv4TTjIqgrYb9NASF&export=download")
+                    'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link')
                 }
-                bg={"none"}
+                bg={'none'}
                 px={2}
                 py={1}
-                rounded={"md"}
+                rounded={'md'}
                 _hover={{
-                  color: "black",
-                  textDecoration: "none",
-                  bg: "gray.200",
+                  color: 'black',
+                  textDecoration: 'none',
+                  bg: 'gray.200',
                 }}
+              >
+                Resume
+              </Button>
+              <Button
+                leftIcon={<GrDocumentPdf />}
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = aman // PDF file URL
+                  link.download = 'Aman-Modanwal-Resume.pdf' // File name for download
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+                bg="none"
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
+                }}
+                className="nav-link resume"
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
               >
                 Resume
               </Button>
@@ -311,5 +343,5 @@ export default function Navbar({ sections }) {
         ) : null}
       </Box>
     </>
-  );
+  )
 }

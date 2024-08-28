@@ -3,15 +3,7 @@ import React from "react";
 import GitHubCalendar from "react-github-calendar";
 
 function GithubCal() {
-  const colourTheme = {
-    background: "transparent",
-    text: "",
-    grade4: "#19c9ea",
-    grade3: "#19c9ea",
-    grade2: "#19c9ea",
-    grade1: "#19c9ea",
-    grade0: "#19c9ea",
-  };
+
   return (
     <Box width={'90%'} margin={'auto'}>
       <Center>
