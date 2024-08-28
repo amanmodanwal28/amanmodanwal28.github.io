@@ -3,8 +3,9 @@ import { useColorMode } from "@chakra-ui/color-mode";
 import { Image } from "@chakra-ui/image";
 import { Stack, Flex, Box, Text } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
-import aman from "./amanResume.pdf";
+
 import React, { useRef, useState } from "react";
+import aman from './amanResume.pdf'
 
 
 function Header() {
@@ -15,16 +16,7 @@ function Header() {
   const Ref2 = useRef();
 
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-  function downloadFile() {
 
-  }
-
-  // const resumedown2 = () => {
-  //     window.open(
-  //       "https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link",
-  //       "_blank"
-  //     );
-  // };
   const Back = () => {
     return (
       <div className="back" ref={Ref2}>
@@ -88,10 +80,13 @@ function Header() {
           <Button
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             onClick={() => {
-              // Create a temporary <a> element to trigger the download
+              window.open(
+                'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link',
+                '_blank'
+              )
               const link = document.createElement('a')
-              link.href = aman // Imported PDF file URL
-              link.download = 'Aman-Modanwal-Resume.pdf' // Filename for download
+              link.href = aman
+              link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name if needed
               document.body.appendChild(link)
               link.click()
               document.body.removeChild(link)

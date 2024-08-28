@@ -294,35 +294,22 @@ export default function Navbar({ sections }) {
               >
                 Contact
               </Button>
-              <Button
-                leftIcon={<GrDocumentPdf />}
-                onClick={() =>
-                  (window.location.href =
-                    'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link')
-                }
-                bg={'none'}
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                  color: 'black',
-                  textDecoration: 'none',
-                  bg: 'gray.200',
-                }}
-              >
-                Resume
-              </Button>
+             
               <Button
                 leftIcon={<GrDocumentPdf />}
                 onClick={() => {
+                  window.open(
+                    'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link',
+                    '_blank'
+                  )
                   const link = document.createElement('a')
-                  link.href = aman // PDF file URL
-                  link.download = 'Aman-Modanwal-Resume.pdf' // File name for download
+                  link.href = aman
+                  link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name
                   document.body.appendChild(link)
                   link.click()
                   document.body.removeChild(link)
                 }}
-                bg="none"
+                bg={'none'}
                 px={2}
                 py={1}
                 rounded={'md'}
