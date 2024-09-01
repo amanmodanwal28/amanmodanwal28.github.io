@@ -20,7 +20,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useColorMode } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
 import { ScrollContext } from "../Context/ScrollContext";
-import aman from './amanResume.pdf'
+
 export default function Navbar({ sections }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
@@ -167,37 +167,6 @@ export default function Navbar({ sections }) {
               >
                 Contact
               </Button>
-              <Button
-                leftIcon={<GrDocumentPdf />}
-                onClick={() => {
-                  window.open(
-                    'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link'
-                  )
-                  // downloadFile();
-                }}
-                bg="none"
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                  textDecoration: 'none',
-                  bg: useColorModeValue('gray.200', 'gray.700'),
-                  color: 'white',
-                }}
-                className="nav-link resume"
-                id="resume-button-1"
-                fontWeight={'bold'}
-                fontFamily={'san-serif'}
-              >
-                <a
-                  id="resume-link-1"
-                  href={aman}
-                  download={'Aman-Modanwal-Resume'}
-                >
-                  {' '}
-                  Resume{' '}
-                </a>
-              </Button>
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
@@ -294,16 +263,17 @@ export default function Navbar({ sections }) {
               >
                 Contact
               </Button>
-             
+
               <Button
                 leftIcon={<GrDocumentPdf />}
                 onClick={() => {
                   window.open(
-                    'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link',
+                    'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/amanResume.pdf',
                     '_blank'
                   )
                   const link = document.createElement('a')
-                  link.href = aman
+                  link.href =
+                    'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/amanResume.pdf'
                   link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name
                   document.body.appendChild(link)
                   link.click()

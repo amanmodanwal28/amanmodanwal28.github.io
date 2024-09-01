@@ -5,7 +5,7 @@ import { Stack, Flex, Box, Text } from "@chakra-ui/layout";
 import { useMediaQuery } from "@chakra-ui/media-query";
 
 import React, { useRef, useState } from "react";
-import aman from './amanResume.pdf'
+
 
 
 function Header() {
@@ -81,11 +81,12 @@ function Header() {
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             onClick={() => {
               window.open(
-                'https://drive.google.com/file/d/1nHORFk1c08Pf-w9FS4Q8jWFDcph0U4ot/view?usp=drive_link',
+                'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/amanResume.pdf',
                 '_blank'
               )
               const link = document.createElement('a')
-              link.href = aman
+             link.href =
+               'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/amanResume.pdf'
               link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name if needed
               document.body.appendChild(link)
               link.click()
