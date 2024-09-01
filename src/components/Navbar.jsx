@@ -167,6 +167,37 @@ export default function Navbar({ sections }) {
               >
                 Contact
               </Button>
+              <Button
+                leftIcon={<GrDocumentPdf />}
+                onClick={() => {
+                  window.open(
+                    'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/Aman-Modanwal-Resume.pdf',
+                    '_blank'
+                  )
+                  const link = document.createElement('a')
+                  link.href =
+                    'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/Aman-Modanwal-Resume.pdf'
+                  link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+                bg={'none'}
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  // eslint-disable-next-line react-hooks/rules-of-hooks
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                  color: 'white',
+                }}
+                className="nav-link resume"
+                fontWeight={'bold'}
+                fontFamily={'san-serif'}
+              >
+                Resume
+              </Button>
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
@@ -268,12 +299,12 @@ export default function Navbar({ sections }) {
                 leftIcon={<GrDocumentPdf />}
                 onClick={() => {
                   window.open(
-                    'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/amanResume.pdf',
+                    'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/Aman-Modanwal-Resume.pdf',
                     '_blank'
                   )
                   const link = document.createElement('a')
                   link.href =
-                    'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/amanResume.pdf'
+                    'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/Aman-Modanwal-Resume.pdf'
                   link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name
                   document.body.appendChild(link)
                   link.click()

@@ -81,12 +81,12 @@ function Header() {
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             onClick={() => {
               window.open(
-                'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/amanResume.pdf',
+                'https://github.com/amanmodanwal28/amanmodanwal28/blob/main/Aman-Modanwal-Resume.pdf',
                 '_blank'
               )
               const link = document.createElement('a')
              link.href =
-               'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/amanResume.pdf'
+               'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/Aman-Modanwal-Resume.pdf'
               link.download = 'Aman-Modanwal-Resume.pdf' // Customize the file name if needed
               document.body.appendChild(link)
               link.click()
