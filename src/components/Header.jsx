@@ -8,16 +8,17 @@ import {
   Badge,
   Image,
   SimpleGrid,
+  Spinner,
 } from '@chakra-ui/react'
 import { FiFileText, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { motion } from 'framer-motion'
+import { useGitHub, FALLBACK_AVATAR } from '../Context/GitHubContext'
 
 const MotionBox = motion(Box)
 
 const RESUME_URL =
   'https://raw.githubusercontent.com/amanmodanwal28/amanmodanwal28/main/Aman-Modanwal-Resume.pdf'
 
-// VIEW only
 const handleViewResume = () => {
   window.open(
     `https://docs.google.com/viewer?url=${encodeURIComponent(RESUME_URL)}&embedded=true`,
@@ -33,6 +34,8 @@ const metrics = [
 ]
 
 function Header({ aboutRef }) {
+  const { loading, avatar } = useGitHub()
+
   return (
     <Box
       ref={aboutRef}
@@ -129,7 +132,6 @@ function Header({ aboutRef }) {
           </Text>
 
           <HStack spacing={3} mb={8} flexWrap="wrap">
-            {/* VIEW RESUME — only this one views */}
             <Button
               size="md"
               leftIcon={<FiFileText />}
@@ -203,24 +205,28 @@ function Header({ aboutRef }) {
             border="1px solid"
             borderColor="whiteAlpha.100"
           >
-            <Flex justify="center" mb={6}>
-              <Box
-                position="relative"
-                borderRadius="full"
-                p="3px"
-                bgGradient="linear(to-br, teal.400, blue.500, purple.500)"
-              >
-                <Image
-                  className="home-img"
-                  src="/profile-photo.jpg"
-                  fallbackSrc="https://ui-avatars.com/api/?name=Aman+Modanwal&background=0a0a0f&color=4fd1c5&size=200"
-                  alt="Aman Modanwal"
-                  boxSize={{ base: '140px', md: '160px' }}
+            <Flex justify="center" mb={6} minH="160px" align="center">
+              {loading ? (
+                <Spinner color="teal.300" size="lg" />
+              ) : (
+                <Box
+                  position="relative"
                   borderRadius="full"
-                  objectFit="cover"
-                  bg="surface.100"
-                />
-              </Box>
+                  p="3px"
+                  bgGradient="linear(to-br, teal.400, blue.500, purple.500)"
+                >
+                  <Image
+                    className="home-img"
+                    src={avatar}
+                    fallbackSrc={FALLBACK_AVATAR}
+                    alt="Aman Modanwal"
+                    boxSize={{ base: '140px', md: '160px' }}
+                    borderRadius="full"
+                    objectFit="cover"
+                    bg="surface.100"
+                  />
+                </Box>
+              )}
             </Flex>
 
             <SimpleGrid columns={2} spacing={3}>
